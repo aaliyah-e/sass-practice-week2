@@ -1,5 +1,20 @@
 @use "vendor/normalize";
 @use "partials/base";
 @use "partials/colors";
+@use "partials/mixins";
+@use "partials/typography";
 
 // Your CSS styles go here
+body {
+    font-family: typography.$primary-font;
+}
+
+.menu {
+    h2 {
+        @include mixins.script-heading();
+    }
+}
+
+.main-link {
+    @include mixins.main-link();
+}
